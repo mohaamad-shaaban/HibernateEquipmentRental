@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_rental
+    environment:
+      POSTGRES_DB: rental_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+    ports:
+      - "5423:5423"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    command: postgres -p 5423 -c listen_addresses='*'
+
+volumes:
+  postgres_data:

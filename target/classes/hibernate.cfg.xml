@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5423/rental_db?ssl=false&amp;sslmode=disable</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">postgrespassword</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.highlight_sql">true</property>
+
+        <mapping class="com.example.rental.entity.Branch"/>
+        <mapping class="com.example.rental.entity.Category"/>
+        <mapping class="com.example.rental.entity.Customer"/>
+        <mapping class="com.example.rental.entity.EquipmentTransfer"/>
+        <mapping class="com.example.rental.entity.EquipmentUnit"/>
+        <mapping class="com.example.rental.entity.Maintenance"/>
+        <mapping class="com.example.rental.entity.Payment"/>
+        <mapping class="com.example.rental.entity.Product"/>
+        <mapping class="com.example.rental.entity.Reservation"/>
+        <mapping class="com.example.rental.entity.ReservationItem"/>
+        <mapping class="com.example.rental.entity.ReservationUnit"/>
+        <mapping class="com.example.rental.entity.ReservationUnitId"/>
+    </session-factory>
+</hibernate-configuration>
